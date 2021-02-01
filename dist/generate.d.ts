@@ -1,1 +1,2 @@
-export default function generate(): void;
+import { IConfig } from './const';
+export default function generate(config?: IConfig): Promise<void>;

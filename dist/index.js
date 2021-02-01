@@ -13,8 +13,9 @@ program
 program.parse(process.argv);
 var options = program.opts();
 if (options.init) {
-    download_1["default"]();
-    generate_1["default"]();
+    download_1["default"]().then(function (config) {
+        generate_1["default"](config);
+    });
 }
 if (options.generate) {
     // 仅生成文件
@@ -25,4 +26,5 @@ if (options.generate) {
  * 2. 下载远程 protobuf文件，并根据配置进行存储
  * 3. 根据配置生成`protoc相关命令`
  * 4. 执行命令，生成JS文件
+ * 5. 生成默认导出的clients文件（可选）
  */

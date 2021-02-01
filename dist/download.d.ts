@@ -1,1 +1,2 @@
-export default function dowload(): void;
+import { IConfig } from './const';
+export default function dowload(): Promise<IConfig>;
