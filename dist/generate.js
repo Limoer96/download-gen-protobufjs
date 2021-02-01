@@ -104,7 +104,7 @@ function generate(config) {
                                 process.exit(1);
                             }
                             else {
-                                console.log(chalk.green('generate protofile success!'));
+                                console.log(chalk.green('generate protobuf javascript file success!'));
                             }
                         });
                     }

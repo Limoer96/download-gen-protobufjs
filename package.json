@@ -1,5 +1,5 @@
 {
-  "name": "download-gen-protobufjs",
+  "name": "jsprotobuf-generater",
   "version": "0.0.1",
   "description": "A tool to download protobuf file from origin git repo and generate JavaScript protobuf code.",
   "main": "index.js",

@@ -1,4 +1,4 @@
-## download-gen-protobufjs
+## jsprotobuf-generater
 
 > A tool to download protobuf file from origin git repo and generate JavaScript protobuf code.
 
@@ -7,7 +7,7 @@
 
 ### 使用方式
 
-1. `yarn add --dev download-gen-protobufjs`
+1. `yarn add --dev jsprotobuf-generater`
 2. 在`package.json`中，`scripts`中配置如下：
 
 ```json
