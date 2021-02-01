@@ -1,8 +1,22 @@
 {
-  "name": "download-gen-protobuf",
-  "version": "1.0.0",
+  "name": "download-gen-protobufjs",
+  "version": "0.0.1",
+  "description": "A tool to download protobuf file from origin git repo and generate JavaScript protobuf code.",
   "main": "index.js",
   "license": "MIT",
+  "author": "limoer",
+  "keywords": [
+    "grpc",
+    "grpc-web",
+    "protobuf",
+    "typescript"
+  ],
+  "homepage": "https://github.com/Limoer96/download-gen-protobufjs",
+  "bugs": "https://github.com/Limoer96/download-gen-protobufjs/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Limoer96/download-gen-protobufjs"
+  },
   "dependencies": {
     "chalk": "^4.1.0",
     "commander": "^7.0.0",
