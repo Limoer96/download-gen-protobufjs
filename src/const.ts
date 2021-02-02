@@ -1,6 +1,7 @@
 import * as path from 'path'
+import * as os from 'os'
 
-export const tempFileName = `${process.env.TEMP}/grpc-remote`
+export const tempFileName = `${os.tmpdir()}/grpc-remote`
 
 export interface IConfig {
   url: string
