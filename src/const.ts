@@ -8,11 +8,17 @@ export interface IConfig {
   root?: string
   output?: string
   sourcePath?: string
+  clientWrapper?: {
+    name?: string
+    path?: string
+  }
 }
 
 const fileName = 'gpc-config.json'
+export const clientFileName = 'clients.ts'
 
 export const configFilePath = path.resolve(process.cwd(), fileName)
+export const clientFileTargetPath = path.resolve(process.cwd(), 'src')
 
 export const configTemplate: IConfig = {
   root: 'proto',

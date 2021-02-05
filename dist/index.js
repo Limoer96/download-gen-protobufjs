@@ -2,14 +2,16 @@
 exports.__esModule = true;
 var download_1 = require("./download");
 var generate_1 = require("./generate");
+var makeClients_1 = require("./makeClients");
 var commander_1 = require("commander");
 var program = new commander_1.Command();
 program.version('0.0.1');
-program.description('download and generate JavaScript protobuf code.');
+program.description('Download and generate JavaScript protobuf code.');
 program
     .allowUnknownOption()
-    .option('-i, --init', 'download and generate JavaScript protobuf code.')
-    .option('-g, --generate', 'generate JavaScript protobuf code based on local protobuf files.');
+    .option('-i, --init', 'Download and generate JavaScript protobuf code.')
+    .option('-g, --generate', 'Generate JavaScript protobuf code based on local protobuf files.')
+    .option('-c, --clients', 'Export client instances uniformly.');
 program.parse(process.argv);
 var options = program.opts();
 if (options.init) {
@@ -20,6 +22,9 @@ if (options.init) {
 if (options.generate) {
     // 仅生成文件
     generate_1["default"]();
+}
+if (options.clients) {
+    makeClients_1["default"]();
 }
 /**
  * 1. 读取本地配置

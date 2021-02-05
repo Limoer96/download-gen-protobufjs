@@ -1,16 +1,18 @@
 import download from './download'
 import generate from './generate'
+import makeClientsFile from './makeClients'
 import { Command } from 'commander'
 
 const program = new Command()
 
 program.version('0.0.1')
-program.description('download and generate JavaScript protobuf code.')
+program.description('Download and generate JavaScript protobuf code.')
 
 program
   .allowUnknownOption()
-  .option('-i, --init', 'download and generate JavaScript protobuf code.')
-  .option('-g, --generate', 'generate JavaScript protobuf code based on local protobuf files.')
+  .option('-i, --init', 'Download and generate JavaScript protobuf code.')
+  .option('-g, --generate', 'Generate JavaScript protobuf code based on local protobuf files.')
+  .option('-c, --clients', 'Export client instances uniformly.')
 
 program.parse(process.argv)
 
@@ -25,6 +27,10 @@ if (options.init) {
 if (options.generate) {
   // 仅生成文件
   generate()
+}
+
+if (options.clients) {
+  makeClientsFile()
 }
 
 /**

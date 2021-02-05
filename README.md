@@ -24,12 +24,16 @@
 
 #### _gpc-config.json_
 
-```json
+```js
 {
   "root": "xx", // 远程protobuf文件存放在本地的目录
   "output": "src/xx", // JavaScript protobuf 文件生成目录
   "url": "direct:https://gitee.com/xx/xx.git#main", // 远程仓库的地址支持gitee/github/gitlab等
-  "sourcePath": "cherry/src/main/protobuf" // 需要生成javascript protobuf文件的源目录
+  "sourcePath": "cherry/src/main/protobuf", // 需要生成javascript protobuf文件的源目录,
+  "clientWrapper": { // 如果需要生成默认导出client，则需要配置此参数
+    "name": "xx", // 默认导出名
+    "path": "src/utils/fileName" // clientWrapper.path fileName可不传文件扩展名
+  }
 }
 ```
 
@@ -50,3 +54,4 @@ Usage: gpc [<param>]
 | ------------- | --------------------------------------------------------------- | ------------------ |
 | -i/--init     | 初始化并拉取远程 git repos，生成 javascript protobuf code       | download，generate |
 | -g/--generate | 在存在本地 protobuf 的文件下，直接生成 JavaScript protobuf 文件 | generate           |
+| -c/--clients  | 生成所有 client 的默认导出文件                                  |                    |
